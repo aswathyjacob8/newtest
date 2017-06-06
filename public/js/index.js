@@ -1745,6 +1745,13 @@ function havePermission () {
         bool = true
       }
       break
+    case 'email':
+      if (!window.owner) {
+        bool = false
+      } else {
+        bool = true
+      }
+      break
   }
   return bool
 }
@@ -2618,7 +2625,7 @@ editorInstance.on('beforeChange', function (cm, change) {
           break
 	    case 'email':
           $('.locked-modal').modal('show')
-          break
+          break 
       }
     }
   } else {
