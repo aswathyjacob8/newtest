@@ -51,7 +51,8 @@ export const getUIElements = () => ({
       locked: $('.ui-permission-locked'),
       private: $('.ui-permission-private'),
       limited: $('.ui-permission-limited'),
-      protected: $('.ui-permission-protected')
+      protected: $('.ui-permission-protected'),
+	  email: $('.ui-permission-email')
     },
     delete: $('.ui-delete-note')
   },
