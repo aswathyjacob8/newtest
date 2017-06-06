@@ -1658,6 +1658,10 @@ ui.infobar.permission.limited.click(function () {
 ui.infobar.permission.protected.click(function () {
   emitPermission('protected')
 })
+// protected
+ui.infobar.permission.email.click(function () {
+  emitPermission('email')
+})
 // delete note
 ui.infobar.delete.click(function () {
   $('.delete-modal').modal('show')
