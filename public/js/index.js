@@ -1658,7 +1658,7 @@ ui.infobar.permission.limited.click(function () {
 ui.infobar.permission.protected.click(function () {
   emitPermission('protected')
 })
-// protected
+// email
 ui.infobar.permission.email.click(function () {
   emitPermission('email')
 })
@@ -1707,6 +1707,10 @@ function updatePermission (newPermission) {
     case 'private':
       label = '<i class="fa fa-hand-stop-o"></i> Private'
       title = 'Only owner can view & edit'
+      break
+    case 'email':
+      label = '<i class="fa fa-envelope"></i> Email'
+      title = 'Only email protected can view & edit'
       break
   }
   if (personalInfo.userid && window.owner && personalInfo.userid === window.owner) {
