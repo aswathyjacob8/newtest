@@ -2616,6 +2616,9 @@ editorInstance.on('beforeChange', function (cm, change) {
         case 'private':
           $('.locked-modal').modal('show')
           break
+	    case 'email':
+          $('.locked-modal').modal('show')
+          break
       }
     }
   } else {
