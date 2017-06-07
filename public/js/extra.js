@@ -1185,7 +1185,7 @@ md.use(tocPlugin)
 md.use(slidesharePlugin)
 md.use(speakerdeckPlugin)
 md.use(pdfPlugin)
-md.use(emailPlugin)
+
 
 export default {
   md
