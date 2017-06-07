@@ -1132,6 +1132,21 @@ const pdfPlugin = new Plugin(
     }
 )
 
+// email
+const emailPlugin = new Plugin(
+    // regexp to match
+    /{%emailAccess\s*([\d\D]*?)\s*%}/,
+
+    (match, utils) => {
+      const shortnoteid = match[1]
+      if (!shortnoteid) return
+      const div = $('<div class="email raw"></div>')
+      const icon = '<i class="icon fa fa-envelope-o fa-5x"></i>'
+      div.append(icon)
+      return div[0].outerHTML
+    }
+)
+
 // yaml meta, from https://github.com/eugeneware/remarkable-meta
 function get (state, line) {
   const pos = state.bMarks[line]
@@ -1183,6 +1198,7 @@ md.use(tocPlugin)
 md.use(slidesharePlugin)
 md.use(speakerdeckPlugin)
 md.use(pdfPlugin)
+md.use(emailPlugin)
 
 export default {
   md
