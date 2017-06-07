@@ -1141,7 +1141,7 @@ const emailPlugin = new Plugin(
       const shortnoteid = match[1]
       if (!shortnoteid) return
       const div = $('<div class="email raw"></div>')
-      const icon = '<i class="icon fa fa-envelope-o fa-5x"></i>'
+      const icon = '<i class="icon fa fa-envelope-o fa-5x">'shortnoteid'</i>'
       div.append(icon)
       return div[0].outerHTML
     }
