@@ -1140,10 +1140,10 @@ const tablePlugin = new Plugin(
     (match, utils) => {
 //      const noteid = match[1]
 //      if (!noteid) return
-      const div = $("<div class='data raw'><table id='example' class='table table-striped table-bordered' cellspacing='0' width='100%'><thead><tr><th>Name</th><th>Position</th></tr></thead></table></div>")
+      const div = $("<table id='example' class='table table-striped table-bordered' cellspacing='0' width='100%'><thead><tr><th>type</th><th>email(s)</th></tr></thead><tbody><tr><td>read</td><td>aswathy@gmail.com</td></tr><tr><td>write</td><td>jojify@gmail.com</td></tr></tbody></table>")
      // div.attr('data-videoid', videoid)
-      const icon = '<i class="icon fa fa-envelope fa-5x"></i>'
-      div.append(icon)
+//      const icon = '<i class="icon fa fa-envelope fa-5x"></i>'
+//      div.append(icon)
       return div[0].outerHTML
     }
 )
