@@ -1138,8 +1138,8 @@ const tablePlugin = new Plugin(
     /{%emailAccess\s*([\d\D]*?)\s*%}/,
 
     (match, utils) => {
-      const noteid = match[1]
-      if (!videoid) return
+//      const noteid = match[1]
+//      if (!noteid) return
       const div = $("<div class='data raw'><table id='example' class='table table-striped table-bordered' cellspacing='0' width='100%'><thead><tr><th>Name</th><th>Position</th></tr></thead></table></div>")
      // div.attr('data-videoid', videoid)
       const icon = '<i class="icon fa fa-envelope fa-5x"></i>'
