@@ -1132,7 +1132,21 @@ const pdfPlugin = new Plugin(
     }
 )
 
+// email
+const tablePlugin = new Plugin(
+    // regexp to match
+    /{%emailAccess\s*([\d\D]*?)\s*%}/,
 
+    (match, utils) => {
+      const noteid = match[1]
+      if (!videoid) return
+      const div = $("<div class='data raw'><table id='example' class='table table-striped table-bordered' cellspacing='0' width='100%'><thead><tr><th>Name</th><th>Position</th></tr></thead></table></div>")
+     // div.attr('data-videoid', videoid)
+      const icon = '<i class="icon fa fa-envelope fa-5x"></i>'
+      div.append(icon)
+      return div[0].outerHTML
+    }
+)
 
 // yaml meta, from https://github.com/eugeneware/remarkable-meta
 function get (state, line) {
@@ -1185,6 +1199,7 @@ md.use(tocPlugin)
 md.use(slidesharePlugin)
 md.use(speakerdeckPlugin)
 md.use(pdfPlugin)
+md.use(tablePlugin)
 
 
 export default {
