@@ -1136,14 +1136,13 @@ const pdfPlugin = new Plugin(
 const tablePlugin = new Plugin(
     // regexp to match
     /{%emailAccess\s*([\d\D]*?)\s*%}/,
-
     (match, utils) => {
-//      const noteid = match[1]
-//      if (!noteid) return
+	  const noteid = match[1]
+      if (!noteid) return
       const div = $("<table id='example' class='table table-striped table-bordered' cellspacing='0' width='100%'><thead><tr><th>type</th><th>email(s)</th></tr></thead><tbody><tr><td>read</td><td>aswathy@gmail.com</td></tr><tr><td>write</td><td>jojify@gmail.com</td></tr></tbody></table>")
      // div.attr('data-videoid', videoid)
-//      const icon = '<i class="icon fa fa-envelope fa-5x"></i>'
-//      div.append(icon)
+     const icon = '<label>'noteid'</label>'
+     div.append(icon)
       return div[0].outerHTML
     }
 )
